@@ -62,7 +62,7 @@ impl<T> Track for Option<T>
 }
 
 #[derive(PartialEq, Eq)]
-pub struct Tracked<T> {
+pub struct Tracked<T: ?Sized> {
     pub location: Option<Span>,
     pub value: T
 }
